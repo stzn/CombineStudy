@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Sink'/>
+        <page name='Assign'/>
+        <page name='Published'/>
+        <page name='URLSession'/>
+        <page name='KVO'/>
+        <page name='NotificationCenter'/>
+        <page name='WrappedExistingImplementation'/>
+        <page name='Bindings_OnlyUIKit'/>
+        <page name='Bindings_SwiftUI_Combine'/>
+        <page name='Bindings_UIKit_Combine'/>
+    </pages>
+</playground>

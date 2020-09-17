@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Share'/>
+        <page name='Multicast'/>
+        <page name='Transform'/>
+        <page name='Filter'/>
+        <page name='Find'/>
+        <page name='Drop'/>
+        <page name='Prefix'/>
+        <page name='RetryAndCatch'/>
+        <page name='Prepend'/>
+        <page name='Append'/>
+        <page name='SwitchToLatest'/>
+        <page name='Merge'/>
+        <page name='Zip'/>
+        <page name='CombineLatest'/>
+        <page name='Delay'/>
+        <page name='CollectByTime'/>
+        <page name='CollectByTimeOrCount'/>
+        <page name='Debounce'/>
+        <page name='Throttle'/>
+        <page name='Timeout'/>
+        <page name='TimeoutError'/>
+        <page name='MesureInterval'/>
+        <page name='Sequence'/>
+        <page name='ShareNotWork'/>
+        <page name='Debugging'/>
+        <page name='flatMap2'/>
+        <page name='Multicast2'/>
+        <page name='Replace'/>
+    </pages>
+</playground>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Just'/>
+        <page name='Empty'/>
+        <page name='Fail'/>
+        <page name='Future'/>
+        <page name='Deferred'/>
+        <page name='CustomPublisher'/>
+        <page name='CustomPublisher2'/>
+    </pages>
+</playground>

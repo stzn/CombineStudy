@@ -8,6 +8,7 @@
 ## 実行環境
 
 Xcode12
+iOS14
 
 ## Presentation
 
@@ -33,10 +34,11 @@ Custom Scheduler を使用した例も含んでいます。
 
 ## SampleApp
 
-下記の 2 つのサンプルアプリがあります。
+下記の 3 つのサンプルアプリがあります。
 
-- UserRegistration(テキスト入力、バリデーション)
-- CombineCollection(リスト表示、詳細画面遷移)
+- UserRegistration(テキスト入力、バリデーションの検証)
+- CombineCollection(リスト表示、詳細画面遷移の検証)
+- ComplexUserRegistration(複数画面にまたがった場合の検証)
 
 その中に複数のパターンがあります。
 
@@ -45,7 +47,8 @@ Custom Scheduler を使用した例も含んでいます。
 - SwiftUI + Combine
 
 ※ CombineCollection の SwiftUI + Combine は  
-実装の方法がよくないせいか、パフォーマンスがよくありません。  
+Grid に表示する画像の数を制限しています。
+制限しないとメモリの使い過ぎでクラッシュするためです。
 (Lazy な View で UICollectionView を置き換えていますが、  
 Reusable ではないのでそこが起因しているのかもしれません。)  
 現在調査中です。
