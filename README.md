@@ -14,6 +14,9 @@ iOS14
 
 iOSDC 登壇時に使用した資料です。
 
+スライドはこちら
+https://speakerdeck.com/shiz/sorosorocombine
+
 ## Operators
 
 Operator の動作を確認するための Playground 集です。  
