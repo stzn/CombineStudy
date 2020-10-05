@@ -17,6 +17,9 @@ iOSDC 登壇時に使用した資料です。
 スライドはこちら
 https://speakerdeck.com/shiz/sorosorocombine
 
+動画はこちら
+https://www.youtube.com/watch?v=0wTld_ROx2Y&list=PLod2oSGQp3W4BV6sLUdMwlZD0NHt9mHP7&index=18
+
 ## Operators
 
 Operator の動作を確認するための Playground 集です。  
