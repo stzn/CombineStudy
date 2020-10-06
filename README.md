@@ -57,7 +57,7 @@ Grid に表示する画像の数を制限しています。
 制限しないとメモリの使い過ぎでクラッシュするためです。
 (Lazy な View で UICollectionView を置き換えていますが、  
 Reusable ではないのでそこが起因しているのかもしれません。)  
-現在調査中です。
+現在調査中です。 -> DispatchQueueをConcurrencyにすることで解消された...？
 
 ## Timelane
 
