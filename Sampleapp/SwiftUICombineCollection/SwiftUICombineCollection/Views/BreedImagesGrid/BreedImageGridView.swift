@@ -20,8 +20,7 @@ struct BreedImageGridView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 4) {
-                // ここで数を制限しないとメモリを使い過ぎてクラッシュする(調査中)
-                ForEach(model.dogImages.prefix(100)) { dogImage in
+                ForEach(model.dogImages) { dogImage in
                     BreedImageView(dogImage: dogImage)
                 }
             }
