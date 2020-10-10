@@ -24,6 +24,7 @@ struct BreedImageGridView: View {
                     BreedImageView(viewModel: ImageLoaderCache.shared.loaderFor(url: dogImgage.imageURL))
                 }
             }
+            .frame(width: proxy.size.width)
             .navigationTitle(navigationTitle)
             .onAppear {
                 model.fetch(breedType: breed.name,
@@ -69,13 +70,14 @@ struct Grid<Content: View, T: Hashable>: View {
 
     var body: some View {
         VStack {
-            ForEach(0 ..< self.list.count, id: \.self) { i in
-                HStack {
+            ForEach(0 ..< self.list.count, id: \.self) { i  in
+                LazyHStack {
                     ForEach(self.list[i], id: \.self) { object in
                         self.content(object)
                             .frame(width: width/CGFloat(self.columns))
                     }
                 }
+                .frame(height: width/CGFloat(self.columns))
             }
         }
     }
