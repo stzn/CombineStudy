@@ -30,7 +30,7 @@ extension DIContainer {
     struct Loaders {
         let breedListLoader: BreedListLoader
         let dogImageListLoader: DogImageListLoader
-        let imageDataLoader: (URL) -> AnyPublisher<Data, Error>
+        let imageDataLoader: ImageDataLoader
         
         static var live: Self {
             let loaders = configureLoaders()

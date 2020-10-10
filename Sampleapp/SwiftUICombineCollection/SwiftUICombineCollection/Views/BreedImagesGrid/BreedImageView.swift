@@ -8,19 +8,16 @@ import Combine
 import SwiftUI
 
 struct BreedImageView: View {
-    @Environment(\.injected) var container: DIContainer
-    @StateObject var viewModel = BreedImageViewModel()
+    @ObservedObject var viewModel: BreedImageViewModel
 
-    private let dogImage: DogImage
-    init(dogImage: DogImage) {
-        self.dogImage = dogImage
+    init(viewModel: BreedImageViewModel) {
+        self.viewModel = viewModel
     }
 
     var body: some View {
         content
             .onAppear {
-                viewModel.fetch(from: dogImage.imageURL,
-                            using: container.loaders.imageDataLoader)
+                viewModel.fetch()
             }
             .onDisappear {
                 viewModel.cancel()
@@ -45,7 +42,11 @@ struct BreedImageView: View {
 
 struct DogImageView_Previews: PreviewProvider {
     static var previews: some View {
-        BreedImageView(dogImage: .anyDogImage)
+        BreedImageView(viewModel: .init(url: URL(string: "https://any-url.com")!, loader: {
+            _ in Just(UIImage(systemName: "xmark.octagon.fill")!.pngData()!)
+                .setFailureType(to: Error.self).eraseToAnyPublisher()
+        }))
     }
 }
+
 

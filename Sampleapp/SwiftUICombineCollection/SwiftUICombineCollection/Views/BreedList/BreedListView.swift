@@ -8,7 +8,7 @@ import Combine
 import SwiftUI
 
 struct BreedListView: View {
-    @Environment(\.injected) var container: DIContainer
+    @Environment(\.injected.loaders) var loaders: DIContainer.Loaders
     @StateObject var viewModel = BreedListViewModel()
 
     var body: some View {
@@ -17,7 +17,7 @@ struct BreedListView: View {
                 .navigationTitle("BreedList")
         }
         .onAppear {
-            viewModel.fetchList(using: container.loaders.breedListLoader)
+            viewModel.fetchList(using: loaders.breedListLoader)
         }
     }
 

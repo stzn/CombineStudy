@@ -11,10 +11,16 @@ import SwiftUI
 final class BreedImageViewModel: ObservableObject {
     @Published var imageData: Data?
     @Published var error: Error?
+    private var cancellable: AnyCancellable?
 
-    var cancellable: AnyCancellable?
+    private let url: URL
+    private let loader: ImageDataLoader
+    init(url: URL, loader: @escaping ImageDataLoader) {
+        self.url = url
+        self.loader = loader
+    }
 
-    func fetch(from url: URL, using loader: ImageDataLoader) {
+    func fetch() {
         cancellable = loader(url)
             .receiveOnMainQueue()
 //            .receive(on: DispatchQueue.main)
@@ -32,6 +38,5 @@ final class BreedImageViewModel: ObservableObject {
 
     func cancel() {
         cancellable?.cancel()
-        cancellable = nil
     }
 }

@@ -22,6 +22,7 @@
 		D651D4CD24C967C60042DD43 /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4CB24C967C60042DD43 /* BreedListView.swift */; };
 		D651D4D324C967E20042DD43 /* BreedImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4CF24C967E20042DD43 /* BreedImageGridView.swift */; };
 		D651D4D424C967E20042DD43 /* BreedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4D024C967E20042DD43 /* BreedImageView.swift */; };
+		D65D0A2A2531744B00342651 /* ImageLoaderCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65D0A292531744B00342651 /* ImageLoaderCache.swift */; };
 		D670AE2824CA5E3700BDC4C5 /* DisplayBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670AE2724CA5E3700BDC4C5 /* DisplayBreed.swift */; };
 		D670AE2A24CA5E8000BDC4C5 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670AE2924CA5E8000BDC4C5 /* BreedListViewModel.swift */; };
 		D670AE2E24CA6EAE00BDC4C5 /* BreedImagesGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670AE2D24CA6EAE00BDC4C5 /* BreedImagesGridViewModel.swift */; };
@@ -47,6 +48,7 @@
 		D651D4CB24C967C60042DD43 /* BreedListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
 		D651D4CF24C967E20042DD43 /* BreedImageGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedImageGridView.swift; sourceTree = "<group>"; };
 		D651D4D024C967E20042DD43 /* BreedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedImageView.swift; sourceTree = "<group>"; };
+		D65D0A292531744B00342651 /* ImageLoaderCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderCache.swift; sourceTree = "<group>"; };
 		D670AE2724CA5E3700BDC4C5 /* DisplayBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayBreed.swift; sourceTree = "<group>"; };
 		D670AE2924CA5E8000BDC4C5 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 		D670AE2D24CA6EAE00BDC4C5 /* BreedImagesGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesGridViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				D670AE2D24CA6EAE00BDC4C5 /* BreedImagesGridViewModel.swift */,
 				D651D4D024C967E20042DD43 /* BreedImageView.swift */,
 				D670AE2F24CA6EDC00BDC4C5 /* BreedImageViewModel.swift */,
+				D65D0A292531744B00342651 /* ImageLoaderCache.swift */,
 			);
 			path = BreedImagesGrid;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				D651D4A924C9676B0042DD43 /* ContentView.swift in Sources */,
 				D670AE2A24CA5E8000BDC4C5 /* BreedListViewModel.swift in Sources */,
 				D651D4C724C9678F0042DD43 /* DogImage.swift in Sources */,
+				D65D0A2A2531744B00342651 /* ImageLoaderCache.swift in Sources */,
 				D651D4CD24C967C60042DD43 /* BreedListView.swift in Sources */,
 				D651D4C024C9678F0042DD43 /* ImageDataWebLoader.swift in Sources */,
 				D651D4A724C9676B0042DD43 /* SwiftUICombineCollectionApp.swift in Sources */,
