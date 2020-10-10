@@ -16,11 +16,9 @@ final class ImageDataWebLoader {
         self.queue = queue
     }
 
-    var loader: ImageDataLoader {
-        ImageDataLoader { [self] url in
-            client.send(request: URLRequest(url: url))
-                .subscribe(on: queue)
-                .eraseToAnyPublisher()
-        }
+    func load(_ url: URL) -> AnyPublisher<Data, Error> {
+        client.send(request: URLRequest(url: url))
+            .subscribe(on: queue)
+            .eraseToAnyPublisher()
     }
 }

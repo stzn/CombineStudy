@@ -16,9 +16,6 @@
 		D651D4C124C9678F0042DD43 /* DogWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4B724C9678F0042DD43 /* DogWebAPI.swift */; };
 		D651D4C224C9678F0042DD43 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4B824C9678F0042DD43 /* URLSessionHTTPClient.swift */; };
 		D651D4C324C9678F0042DD43 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4B924C9678F0042DD43 /* HTTPClient.swift */; };
-		D651D4C424C9678F0042DD43 /* DogImageListLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4BA24C9678F0042DD43 /* DogImageListLoader.swift */; };
-		D651D4C524C9678F0042DD43 /* BreedListLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4BB24C9678F0042DD43 /* BreedListLoader.swift */; };
-		D651D4C624C9678F0042DD43 /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4BC24C9678F0042DD43 /* ImageDataLoader.swift */; };
 		D651D4C724C9678F0042DD43 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4BE24C9678F0042DD43 /* DogImage.swift */; };
 		D651D4C824C9678F0042DD43 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4BF24C9678F0042DD43 /* Breed.swift */; };
 		D651D4CC24C967C60042DD43 /* BreedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651D4CA24C967C60042DD43 /* BreedRow.swift */; };
@@ -44,9 +41,6 @@
 		D651D4B724C9678F0042DD43 /* DogWebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogWebAPI.swift; sourceTree = "<group>"; };
 		D651D4B824C9678F0042DD43 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		D651D4B924C9678F0042DD43 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		D651D4BA24C9678F0042DD43 /* DogImageListLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogImageListLoader.swift; sourceTree = "<group>"; };
-		D651D4BB24C9678F0042DD43 /* BreedListLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedListLoader.swift; sourceTree = "<group>"; };
-		D651D4BC24C9678F0042DD43 /* ImageDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
 		D651D4BE24C9678F0042DD43 /* DogImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 		D651D4BF24C9678F0042DD43 /* Breed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		D651D4CA24C967C60042DD43 /* BreedRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedRow.swift; sourceTree = "<group>"; };
@@ -119,9 +113,6 @@
 				D651D4B724C9678F0042DD43 /* DogWebAPI.swift */,
 				D651D4B824C9678F0042DD43 /* URLSessionHTTPClient.swift */,
 				D651D4B924C9678F0042DD43 /* HTTPClient.swift */,
-				D651D4BA24C9678F0042DD43 /* DogImageListLoader.swift */,
-				D651D4BB24C9678F0042DD43 /* BreedListLoader.swift */,
-				D651D4BC24C9678F0042DD43 /* ImageDataLoader.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -236,9 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D670AE3024CA6EDC00BDC4C5 /* BreedImageViewModel.swift in Sources */,
-				D651D4C624C9678F0042DD43 /* ImageDataLoader.swift in Sources */,
 				D651D4C124C9678F0042DD43 /* DogWebAPI.swift in Sources */,
-				D651D4C424C9678F0042DD43 /* DogImageListLoader.swift in Sources */,
 				D670AE2E24CA6EAE00BDC4C5 /* BreedImagesGridViewModel.swift in Sources */,
 				D670AE2824CA5E3700BDC4C5 /* DisplayBreed.swift in Sources */,
 				D651D4C224C9678F0042DD43 /* URLSessionHTTPClient.swift in Sources */,
@@ -247,7 +236,6 @@
 				D670AE2A24CA5E8000BDC4C5 /* BreedListViewModel.swift in Sources */,
 				D651D4C724C9678F0042DD43 /* DogImage.swift in Sources */,
 				D651D4CD24C967C60042DD43 /* BreedListView.swift in Sources */,
-				D651D4C524C9678F0042DD43 /* BreedListLoader.swift in Sources */,
 				D651D4C024C9678F0042DD43 /* ImageDataWebLoader.swift in Sources */,
 				D651D4A724C9676B0042DD43 /* SwiftUICombineCollectionApp.swift in Sources */,
 				D651D4D324C967E20042DD43 /* BreedImageGridView.swift in Sources */,

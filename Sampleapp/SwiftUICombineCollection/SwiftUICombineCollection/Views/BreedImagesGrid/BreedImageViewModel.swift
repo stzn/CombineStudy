@@ -15,7 +15,7 @@ final class BreedImageViewModel: ObservableObject {
     var cancellable: AnyCancellable?
 
     func fetch(from url: URL, using loader: ImageDataLoader) {
-        cancellable = loader.load(url)
+        cancellable = loader(url)
             .receiveOnMainQueue()
 //            .receive(on: DispatchQueue.main)
             .sink { finished in

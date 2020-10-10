@@ -17,7 +17,7 @@ final class DogWebAPI {
         self.queue = queue
     }
 
-    var breedListLoader: BreedListLoader {
+    func loadBreedList() -> AnyPublisher<[Breed], Error> {
         struct BreedListAPIModel: Decodable {
             let message: [String: [String]]
             let status: String
@@ -32,17 +32,15 @@ final class DogWebAPI {
             }
         }
 
-        return BreedListLoader { [self] in
-            let request = URLRequest(url: baseURL.appendingPathComponent("breeds/list/all"))
-            return client.send(request: request)
-                .subscribe(on: queue)
-                .decode(type: BreedListAPIModel.self, decoder: JSONDecoder())
-                .map(convert(from:))
-                .eraseToAnyPublisher()
-        }
+        let request = URLRequest(url: self.baseURL.appendingPathComponent("breeds/list/all"))
+        return client.send(request: request)
+            .subscribe(on: queue)
+            .decode(type: BreedListAPIModel.self, decoder: JSONDecoder())
+            .map(convert(from:))
+            .eraseToAnyPublisher()
     }
 
-    var dogImageListLoader: DogImageListLoader {
+    func loadImageList(breedType: BreedType) -> AnyPublisher<[DogImage], Error> {
         struct DogImageListAPIModel: Decodable {
             let message: [String]
             let status: String
@@ -59,13 +57,11 @@ final class DogWebAPI {
             return dogImages
         }
 
-        return DogImageListLoader { [self] breedType in
-            let request = URLRequest(url: baseURL.appendingPathComponent("/breed/\(breedType)/images"))
-            return client.send(request: request)
-                .subscribe(on: queue)
-                .decode(type: DogImageListAPIModel.self, decoder: JSONDecoder())
-                .map(convert(from:))
-                .eraseToAnyPublisher()
-        }
+        let request = URLRequest(url: baseURL.appendingPathComponent("/breed/\(breedType)/images"))
+        return client.send(request: request)
+            .subscribe(on: queue)
+            .decode(type: DogImageListAPIModel.self, decoder: JSONDecoder())
+            .map(convert(from:))
+            .eraseToAnyPublisher()
     }
 }

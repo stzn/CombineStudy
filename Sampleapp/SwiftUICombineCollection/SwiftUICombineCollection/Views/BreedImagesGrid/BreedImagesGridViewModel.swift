@@ -12,8 +12,7 @@ final class BreedImagesGridViewModel: ObservableObject {
     @Published var dogImages: [DogImage] = []
 
     func fetch(breedType: BreedType, using loader: DogImageListLoader) {
-        loader
-            .load(breedType)
+        loader(breedType)
             .replaceError(with: [])
             .receiveOnMainQueue()
             .assign(to: &$dogImages)

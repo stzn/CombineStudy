@@ -15,7 +15,7 @@ final class BreedListViewModel: ObservableObject {
 
     func fetchList(using loader: BreedListLoader) {
         isLoading = true
-        loader.load()
+        loader()
             .map { $0.sorted(by: { $0.name < $1.name }) }
             .map(makeDisplayModels(from:))
             .receiveOnMainQueue()

@@ -4,6 +4,7 @@
 //
 //
 
+import Combine
 import SwiftUI
 
 struct DIContainer: EnvironmentKey {
@@ -21,12 +22,16 @@ extension EnvironmentValues {
     }
 }
 
+typealias BreedListLoader = () -> AnyPublisher<[Breed], Error>
+typealias DogImageListLoader = (BreedType) -> AnyPublisher<[DogImage], Error>
+typealias ImageDataLoader = (URL) -> AnyPublisher<Data, Error>
+
 extension DIContainer {
     struct Loaders {
         let breedListLoader: BreedListLoader
         let dogImageListLoader: DogImageListLoader
-        let imageDataLoader: ImageDataLoader
-
+        let imageDataLoader: (URL) -> AnyPublisher<Data, Error>
+        
         static var live: Self {
             let loaders = configureLoaders()
             return Loaders(
@@ -47,20 +52,25 @@ extension DIContainer {
             let dogWebAPI = DogWebAPI(client: client)
             let imageWebLoader = ImageDataWebLoader(client: client)
 
-            return .init(breedListLoader: dogWebAPI.breedListLoader,
-                         dogImageListLoader: dogWebAPI.dogImageListLoader,
-                         imageDataLoader: imageWebLoader.loader
+            return .init(breedListLoader: dogWebAPI.loadBreedList,
+                         dogImageListLoader: dogWebAPI.loadImageList(breedType:),
+                         imageDataLoader: imageWebLoader.load
             )
         }
     }
-}
+} 
 
-#if DEBUG
 extension DIContainer.Loaders {
     static var stub: Self {
-        .init(breedListLoader: .stub,
-              dogImageListLoader: .stub,
-              imageDataLoader: .stub)
+        .init(breedListLoader: { makeStub([Breed.anyBreed]) },
+              dogImageListLoader: { _ in makeStub([DogImage.anyDogImage]) },
+              imageDataLoader:  { _ in makeStub(UIImage(systemName: "person.fill")!.pngData()!) }
+        )
+    }
+
+    private static func makeStub<Model>(_ model: Model) -> AnyPublisher<Model, Error> {
+        Just(model)
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
     }
 }
-#endif
