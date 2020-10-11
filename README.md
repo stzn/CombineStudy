@@ -52,7 +52,11 @@ Custom Scheduler を使用した例も含んでいます。
 - UIKit + Combine
 - SwiftUI + Combine
 
-※ SwiftUICombineCollection は画像の数が多いとクラッシュします。現在調査中です。
+※ SwiftUICombineCollection は Grid の画像数が多いと URLSession のリクエストでクラッシュします。現在解決策を調査中です。
+
+```
+-[SwiftUI.AccessibilityNode retain]: message sent to deallocated instance)
+```
 
 ## Timelane
 
