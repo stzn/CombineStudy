@@ -96,21 +96,6 @@ struct Grid<Content: View, T: Hashable>: View {
     }
 }
 
-extension Array where Element == DogImage {
-    fileprivate func chunked(into size: Int) -> [[Element]] {
-        var chunked: [[Element]] = []
-
-        for index in 0..<self.count {
-            if index % size == 0 && index != 0 {
-                chunked.append(Array(self[(index - size)..<index]))
-            } else if (index == self.count) {
-                chunked.append(Array(self[index - 1..<index]))
-            }
-        }
-        return chunked
-    }
-}
-
 struct BreedImageGridView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
