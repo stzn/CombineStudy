@@ -69,7 +69,7 @@ struct Grid<Content: View, T: Hashable>: View {
     }
 
     var body: some View {
-        VStack {
+        LazyVStack {
             ForEach(0 ..< self.list.count, id: \.self) { i  in
                 LazyHStack {
                     ForEach(self.list[i], id: \.self) { object in
