@@ -53,6 +53,10 @@ Operator の動きの解説と実際に使用した場合の例などが記載�
 Custom Publisher の作成方法を通して、Combine の仕組みがわかります。  
 [Building custom Combine publishers in Swift](https://swiftbysundell.com/articles/building-custom-combine-publishers-in-swift/)
 
+複数のAPIの結果をまとめて処理する場合のCombineの活用方法が丁寧に解説されています。  
+他にも@Publishedと異なりViewを自動で再描画しないPropertyWrapper(Input)の導入など、役に立つ要素がたくさん学べます。  
+[Connecting and merging Combine publishers in Swift](https://www.swiftbysundell.com/articles/connecting-and-merging-combine-publishers-in-swift/)
+
 # Video
 
 ## WWDC
@@ -118,3 +122,4 @@ Apple の`dataTaskPublisher`の実装です。Custom Publisher を作成する�
 
 Custom Publisher をどう作成するのかについての意見が述べられています。  
 [Custom Publisher の作成方法に関する議論](https://github.com/CombineCommunity/CombineCocoa/pull/7#discussion_r313071982)
+
